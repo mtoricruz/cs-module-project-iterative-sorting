@@ -1,26 +1,35 @@
 # TO-DO: Complete the selection_sort() function below
 def selection_sort(arr):
     # loop through n-1 elements
+    # len(arr) - 1 bc once there's 1 item left in 
+    # unsorted list, we don't have to run a comparison on it.
+    #  Assume it's the highest value left
     for i in range(0, len(arr) - 1):
         cur_index = i
         smallest_index = cur_index
         # TO-DO: find next smallest element
         # (hint, can do in 3 loc)
         # Your code here
+        for elem in range(i+1, len(arr)):
+            if arr[elem] < arr[smallest_index]:
+                smallest_index = elem
 
+        if smallest_index != i:
+            arr[smallest_index], arr[cur_index] = arr[cur_index], arr[smallest_index]
 
         # TO-DO: swap
         # Your code here
+        
 
     return arr
 
 
 # TO-DO:  implement the Bubble Sort function below
-def bubble_sort(arr):
-    # Your code here
+# def bubble_sort(arr):
+#     # Your code here
 
 
-    return arr
+#     return arr
 
 '''
 STRETCH: implement the Counting Sort function below
