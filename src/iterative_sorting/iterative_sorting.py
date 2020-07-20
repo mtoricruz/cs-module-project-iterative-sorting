@@ -31,16 +31,24 @@ def selection_sort(arr):
             arr[smallest_index], arr[cur_index] = arr[cur_index], arr[smallest_index]
 
         
-
+    # return list
     return arr
 
 
 # TO-DO:  implement the Bubble Sort function below
-# def bubble_sort(arr):
-#     # Your code here
+def bubble_sort(arr):
+    # Your code here
+    # Create local variable to break us out when list has been sorted
+    sorted = False
+    
+    while not sorted:
+        sorted = True
+        for i in range(0, len(arr) - 1):
+            if arr[i] > arr[i+1]:
+                sorted = False
+                arr[i], arr[i+1] = arr[i+1], arr[i]
 
-
-#     return arr
+    return arr
 
 '''
 STRETCH: implement the Counting Sort function below
