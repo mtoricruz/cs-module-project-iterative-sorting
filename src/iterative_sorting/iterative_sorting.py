@@ -44,8 +44,11 @@ def bubble_sort(arr):
     while not sorted:
         sorted = True
         for i in range(0, len(arr) - 1):
+            # if i (left position) is greater than value to the right of i
             if arr[i] > arr[i+1]:
+                # it's not sorted yet,
                 sorted = False
+                # so flip those values
                 arr[i], arr[i+1] = arr[i+1], arr[i]
 
     return arr
